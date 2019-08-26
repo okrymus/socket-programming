@@ -14,6 +14,7 @@ try:
 except:
     print("Please enter valid arguments, Example:")
     print("\"python3 TorrentClient.py CS plum.cs.umass.edu 18765\"")
+    print("\"python3 TorrentClient.py P2P pear.cs.umass.edu 19876\"")
 
 
 

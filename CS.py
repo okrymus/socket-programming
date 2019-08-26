@@ -28,6 +28,7 @@ def CS(serverName,serverPort,filename):
     # print(header)
     data = data.split(b'\n\n')[1]
 
+    # split the header
     if b'200 OK' in header[0]:
         for h in header:
             if b'BODY_BYTE_LENGTH' in h:
@@ -57,7 +58,7 @@ def CS(serverName,serverPort,filename):
             count_bytes += len(data)
             # write bytes in to the file
             f.write(data)
-            print(count_bytes)
+            print("Filename: " + filename+" Downloaded %d bytes" %count_bytes)
             # print("loca: ",f.tell())
             if not data:
                 break
